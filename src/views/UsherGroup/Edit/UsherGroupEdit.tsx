@@ -18,7 +18,7 @@ import UsherGroupForm, {
     FormModel,
     SetSubmitting,
     OnDeleteCallback,
-} from '@/views/Form'
+} from '@/views/UsherGroup/Form'
 
 import isEmpty from 'lodash/isEmpty'
 

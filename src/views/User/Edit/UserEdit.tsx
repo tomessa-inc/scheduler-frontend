@@ -19,7 +19,7 @@ import UserForm, {
     FormModel,
     SetSubmitting,
     OnDeleteCallback,
-} from '@/views/Form'
+} from '@/views/User/Form'
 
 import isEmpty from 'lodash/isEmpty'
 
