@@ -1,7 +1,7 @@
 import UsherGroupForm, {
     FormModel,
     SetSubmitting,
-} from '@/views/Form'
+} from '@/views/UsherGroup/Form'
 import toast from '@/components/ui/toast'
 import Notification from '@/components/ui/Notification'
 import { useNavigate } from 'react-router-dom'
