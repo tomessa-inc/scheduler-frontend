@@ -111,9 +111,9 @@ const ScheduleForm = forwardRef<FormikRef, ScheduleFormOptions>((props, ref) => 
                 onSubmit={(values: FormModel, { setSubmitting }) => {
 
                     const formData = cloneDeep(values)
-            /*        console.log('hello')
+                    console.log('hello')
                     console.log(values)
-                    const formData = cloneDeep(values)
+            /*        const formData = cloneDeep(values)
                     console.log('form data');
                     console.log(formData);
               //      const usHerGroups = formData.UsherGroup.map((Usher:any) => {

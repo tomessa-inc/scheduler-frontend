@@ -12,8 +12,8 @@ import { DateRangePicker } from 'rsuite';
 import subDays from 'date-fns/subDays';
 import addDays from 'date-fns/addDays';
 import 'rsuite/styles/index.less';
-import { datesToCreate } from '@/views/Schedule/New/New'
-import { RangeSchema } from './AbsentForm'
+import { datesToCreate } from '@/views/Absence/New/AbsentNew'
+import { RangeSchema } from  '@/@types/common'
 
 type Options = {
     label: string
@@ -24,7 +24,6 @@ type Options = {
 type FormFieldsName = {
     ID: string
     Range: RangeSchema
-    UsherGroup: string
 }
 
 type BasicInformationFields = {
@@ -65,19 +64,6 @@ const BasicInformationFields = (props: BasicInformationFields) => {
             <h5>Basic Information</h5>
             <p className="mb-6">Section to config galldddey information</p>
 
-            <FormItem
-                label="ID"
-                invalid={(errors.ID && touched.ID) as boolean}
-                errorMessage={errors.ID}
-            >
-                <Field
-                    type="text"
-                    autoComplete="off"
-                    name="ID"
-                    placeholder="id"
-                    component={Input}
-                />
-            </FormItem>
            
              <DateRangePicker hoverRange="week" ranges={[]} onChange={handleRange}  />
         </AdaptableCard>

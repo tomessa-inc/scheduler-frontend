@@ -22,3 +22,20 @@ export type TableQueries = {
         key: string | number
     }
 }
+
+
+export type RangeSchema = {
+    start: {
+        day: number,
+        month: number,
+        year: number,
+
+    },
+    end: {
+        day: number,
+        month: number,
+        year: number,
+
+    },
+}
+

@@ -1,5 +1,6 @@
 import type {TableQueries} from "@/@types/common";
 import {FormModel, SetSubmitting} from "@/views/Schedule/Form";
+import {RangeSchema} from "@/@types/common";
 
 export type UserData = {
     ID?: string
@@ -67,21 +68,6 @@ export type SchedulerNewState = {
 type userGroupList = {
     Label: string,
     Value: string
-}
-
-export type RangeSchema = {
-    start: {
-        day: number,
-        month: number,
-        year: number,
-
-    },
-    end: {
-        day: number,
-        month: number,
-        year: number,
-
-    },
 }
 
 export type OnDeleteCallback = React.Dispatch<React.SetStateAction<boolean>>

@@ -13,7 +13,7 @@ import subDays from 'date-fns/subDays';
 import addDays from 'date-fns/addDays';
 import 'rsuite/styles/index.less';
 import { datesToCreate } from '@/views/Schedule/New/New'
-import { RangeSchema } from './ScheduleForm'
+import { RangeSchema } from '@/@types/common'
 
 type Options = {
     label: string

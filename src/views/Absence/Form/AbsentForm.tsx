@@ -12,7 +12,8 @@ import ProductImages from './ProductImages'
 import cloneDeep from 'lodash/cloneDeep'
 import { HiOutlineTrash } from 'react-icons/hi'
 import { AiOutlineSave } from 'react-icons/ai'
-import * as Yup from 'yup'
+import {RangeSchema} from "@/@types/common";
+    import * as Yup from 'yup'
 
 // eslint-disable-next-line  @typescript-eslint/no-explicit-any
 type FormikRef = FormikProps<any>
@@ -36,22 +37,6 @@ type userGroupList = {
     Label: string,
     Value: string
 }
-
-export type RangeSchema = {
-    start: {
-      day: number,
-      month: number,
-      year: number,
-  
-    },
-    end: {
-      day: number,
-      month: number,
-      year: number,
-  
-    },
-  }
-
 
 type AbsentForm = {
     initialData?: InitialData
@@ -120,8 +105,6 @@ const AbsentForm = forwardRef<FormikRef, AbsentForm>((props, ref) => {
         initialData = {
             ID: '',
             Range: '',
-            UsherGroup: []
-            
         },
         onFormSubmit,
         onDiscard,
@@ -141,9 +124,9 @@ const AbsentForm = forwardRef<FormikRef, AbsentForm>((props, ref) => {
                 onSubmit={(values: FormModel, { setSubmitting }) => {
 
                     const formData = cloneDeep(values)
-            /*        console.log('hello')
+                    console.log('hello')
                     console.log(values)
-                    const formData = cloneDeep(values)
+            /*        const formData = cloneDeep(values)
                     console.log('form data');
                     console.log(formData);
               //      const usHerGroups = formData.UsherGroup.map((Usher:any) => {
@@ -154,7 +137,7 @@ const AbsentForm = forwardRef<FormikRef, AbsentForm>((props, ref) => {
                     } 
              
                     formData.UsherGroup = JSON.stringify(formData.UsherGroup) */
-                    formData.UsherGroup = JSON.stringify(formData.UsherGroup)
+                 //   formData.UsherGroup = JSON.stringify(formData.UsherGroup)
                     onFormSubmit?.(formData, setSubmitting, type)
                 }}
             >
