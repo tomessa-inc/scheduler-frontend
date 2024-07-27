@@ -1,5 +1,6 @@
 import { TableQueries } from '@/@types/common'
 import ApiService from './ApiService'
+import appConfig from "@/configs/app.config";
 
 
 /**
@@ -16,7 +17,7 @@ async function formatParams(data:TableQueries) {
    });
 }
 
-export const URL = 'http://127.0.0.1:3500/week'
+export const URL = `${appConfig.apiPrefix}/week`
 export async function apiGetUsers<T, U extends Record<string, unknown>>(
     data: TableQueries
 ) {

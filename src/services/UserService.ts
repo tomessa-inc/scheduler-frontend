@@ -1,7 +1,7 @@
 import { TableQueries } from '@/@types/common'
 import ApiService from './ApiService'
 import {ResetThePassword} from "@/@types/auth";
-
+import {appConfig} from "@/configs/app.config";
 
 /**
  * Formating the params
@@ -17,13 +17,13 @@ async function formatParams(data:TableQueries) {
    });
 }
 
-export const URL = 'http://127.0.0.1:3500/user'
+export const URL = `${appConfig.apiPrefix}/user`
 export async function apiGetUsers<T, U extends Record<string, unknown>>(
     data: TableQueries
 ) {
     const params = await formatParams(data);
-   
-    console.log(`${URL}/page-index/${data['pageIndex']}/page-size/${params.join('/')}`)
+
+    //console.log(`${URL}/page-index/${data['pageIndex']}/page-size/${params.join('/')}`)
     return ApiService.fetchData<T>({
         url: `${URL}/page-index/${data['pageIndex']}/page-size/${params.join('/')}`,
         method: 'get',

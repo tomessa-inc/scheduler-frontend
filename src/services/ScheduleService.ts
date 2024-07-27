@@ -1,5 +1,6 @@
 import { TableQueries } from '@/@types/common'
 import ApiService from './ApiService'
+import appConfig from "@/configs/app.config";
 
 export async function apiGetSalesDashboardData<
     T extends Record<string, unknown>
@@ -24,7 +25,7 @@ async function formatParams(data:TableQueries) {
    });
 }
 
-export const URL = 'http://127.0.0.1:3500/schedule'
+export const URL = `${appConfig.apiPrefix}/schedule`
 export async function apiGetSchedules<T, U extends Record<string, unknown>>(
     data: TableQueries
 ) {

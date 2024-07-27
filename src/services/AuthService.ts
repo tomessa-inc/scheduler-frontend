@@ -8,8 +8,11 @@ import {
     SignInResponse,
     SignUpResponse, ResetThePassword,
 } from '@/@types/auth'
+import appConfig from "@/configs/app.config";
 
-export const URL = 'http://127.0.0.1:3500/auth'
+//
+export const URL = `${appConfig.apiPrefix}/auth`
+//export const URL = 'http://localhost3500/auth'
 export async function apiSignIn(data: SignInCredential) {
     return ApiService.fetchData<SignInResponse>({
         url: `${URL}/sign-in`,

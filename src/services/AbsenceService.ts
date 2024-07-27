@@ -16,8 +16,7 @@ async function formatParams(data:TableQueries) {
    });
 }
 
-export const URL = 'http://127.0.0.1:3500/absence'
-
+export const URL = `${process.env.REACT_APP_BASE_URLs}/absence`
 
 export async function apiGetUsers<T, U extends Record<string, unknown>>(
     data: TableQueries
@@ -47,6 +46,7 @@ export async function apiGetUserById<T, U extends Record<string, unknown>>(
 export async function apiCreateAbsence<T, U extends Record<string, unknown>>(
     data: U
 ) {
+    console.log('create absense')
     console.log(`${URL}/new`);
     console.log(data);
     return ApiService.fetchData<T>({
